@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Plus Jakarta Sans", "Noto Sans Tamil", sans-serif;
+  --font-body: "Inter", "Noto Sans Tamil", sans-serif;
+
+  --color-ink: #101426;
+  --color-ink-soft: #4B5265;
+  --color-canvas: #F4F6FB;
+  --color-surface: #FFFFFF;
+  --color-line: #E4E7F0;
+
+  --color-brand-50: #EEF0FF;
+  --color-brand-100: #E0E4FF;
+  --color-brand-200: #C3C9FF;
+  --color-brand-400: #6E76F0;
+  --color-brand-500: #4A50E0;
+  --color-brand-600: #3A3FC4;
+  --color-brand-700: #2E32A0;
+
+  --color-teal-100: #D7F5F1;
+  --color-teal-400: #2FBFAE;
+  --color-teal-600: #17967F;
+
+  --color-good-500: #1F9D55;
+  --color-good-100: #DFF6E6;
+  --color-warn-500: #C77B0A;
+  --color-warn-100: #FCEDD2;
+  --color-bad-500: #D6423A;
+  --color-bad-100: #FBE0DE;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--color-ink);
+}
+
+::selection {
+  background: var(--color-brand-200);
+}
+
+.focus-ring {
+  outline: none;
+}
+.focus-ring:focus-visible {
+  outline: 2px solid var(--color-brand-500);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
